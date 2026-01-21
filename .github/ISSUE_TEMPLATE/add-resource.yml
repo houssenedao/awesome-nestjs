@@ -1,0 +1,90 @@
+name: Suggest a Resource
+description: Suggest a new library, tool, or resource to add to Awesome NestJS
+title: "[Resource]: "
+labels: ["enhancement", "new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a resource for Awesome NestJS!
+        Please fill out the information below.
+
+  - type: input
+    id: name
+    attributes:
+      label: Resource Name
+      description: The name of the library, tool, or resource
+      placeholder: e.g., nestjs-awesome-library
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Resource URL
+      description: Link to the resource (GitHub, npm, website)
+      placeholder: https://github.com/username/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this resource belong to?
+      options:
+        - Official Resources
+        - Community
+        - Tutorials
+        - Examples
+        - Boilerplate
+        - Open Source Projects
+        - Utilities
+        - Database
+        - Authentication
+        - Testing
+        - Logging
+        - Monitoring
+        - GraphQL
+        - Microservices
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: stars
+    attributes:
+      label: GitHub Stars
+      description: Number of GitHub stars (required for repositories)
+      placeholder: e.g., 150
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of what this resource does
+      placeholder: A NestJS module that provides...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be added?
+      description: Explain why this resource is valuable to the NestJS community
+      placeholder: This resource is useful because...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This resource has at least 10 GitHub stars (if it's a repository)
+          required: false
+        - label: This resource is actively maintained
+          required: false
+        - label: I have verified the link is working
+          required: true
+

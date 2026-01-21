@@ -1,0 +1,50 @@
+name: Report an Issue
+description: Report a broken link, outdated resource, or other issue
+title: "[Issue]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Awesome NestJS!
+        Please describe the issue you found.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      options:
+        - Broken link
+        - Outdated resource
+        - Incorrect information
+        - Duplicate entry
+        - Wrong category
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: resource
+    attributes:
+      label: Affected Resource
+      description: Name or link of the affected resource
+      placeholder: e.g., nestjs-example or https://github.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the issue in detail
+      placeholder: The link to X is broken because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: If you have a suggestion for how to fix this issue
+      placeholder: The correct link should be...
+
